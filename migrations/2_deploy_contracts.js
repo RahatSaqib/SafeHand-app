@@ -12,8 +12,8 @@ module.exports = async function(deployer) {
 	await deployer.deploy(SafeHand, token.address)
 
 	//assign dBank contract into variable to get it's address
-	const safeHand = await SafeHand.deployed()
-
+	const safe = await SafeHand.deployed()
+	console.log(safe.address);
 	//change token's owner/minter from deployer to dBank
-	await token.passMinterRole(safeHand.address)
+	await token.passMinterRole(safe.address)
 };

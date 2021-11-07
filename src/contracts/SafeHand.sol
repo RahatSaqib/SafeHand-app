@@ -19,7 +19,7 @@ contract SafeHand {
   event Borrow(address indexed user, uint collateralEtherAmount, uint borrowedTokenAmount);
   event PayOff(address indexed user, uint fee);
 
-  constructor(Token _token) public {
+  constructor(Token _token) payable {
     token = _token;
   }
 
@@ -44,7 +44,7 @@ contract SafeHand {
     uint interest = interestPerSecond * depositTime;
 
     //send funds to user
-    msg.sender.transfer(etherBalanceOf[msg.sender]); //eth back to user
+    payable(msg.sender).transfer(etherBalanceOf[msg.sender]); //eth back to user
     token.mint(msg.sender, interest); //interest to user
 
     //reset depositer data
@@ -81,7 +81,7 @@ contract SafeHand {
     uint fee = collateralEther[msg.sender]/10; //calc 10% fee
 
     //send user's collateral minus fee
-    msg.sender.transfer(collateralEther[msg.sender]-fee);
+    payable(msg.sender).transfer(collateralEther[msg.sender]-fee);
 
     //reset borrower's data
     collateralEther[msg.sender] = 0;

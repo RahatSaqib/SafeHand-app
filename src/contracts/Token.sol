@@ -8,19 +8,19 @@ contract Token is ERC20 {
 
   event MinterChanged(address indexed from, address to);
 
-  constructor() public payable ERC20("Decentralized Bank Currency", "DBC") {
+  constructor() payable ERC20("Decentralized Bank Currency", "DBC") {
     minter = msg.sender; //only initially
   }
-  function passMinterRole(address mintRoleAddress) public returns (bool) {
-  	require(msg.sender==mintRoleAddress, 'Error, only owner can change pass minter role');
-  	minter = mintRoleAddress;
+  function passMinterRole(address safeHand) public returns (bool) {
+  	require(msg.sender == minter, 'Error, only owner can change pass minter role');
+  	minter = safeHand;
 
-    emit MinterChanged(msg.sender, mintRoleAddress);
+    emit MinterChanged(msg.sender, safeHand);
     return true;
   }
 
   function mint(address account, uint256 amount) public {
-		require(msg.sender==minter, 'Error, msg.sender does not have minter role'); //mintRoleAddress
+		require(msg.sender==minter, 'Error, msg.sender does not have minter role'); //safeHand
 		_mint(account, amount);
 	}
 
