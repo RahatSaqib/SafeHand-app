@@ -105,11 +105,11 @@ class App extends Component {
     return (
       // <Tabs/>
       <div className='text-railway'>
-        <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+        <nav className="navbar navbar-dark fixed-top flex-md-nowrap p-0 shadow">
           <div
             className="navbar-brand col-sm-3 col-md-2 mr-0 flex" style={{display:"flex"}}
           >
-        <img src={safehandpic} className="App-logo" alt="logo" height="32" width="32"/>
+        <img src={safehandpic} className="App-logo" style ={{width :"40px !important" ,height:"40px"}} alt="logo" height="32"/>
           <b>Safe Hand</b>
         </div>
         </nav>
@@ -120,7 +120,11 @@ class App extends Component {
           <br></br>
           <div className="row">
             <main role="main" className="col-lg-12 d-flex text-center">
-              <div className="content mr-auto ml-auto">
+              <div className="content mr-auto ml-auto shadow" style={{    
+                background: "#1b1732",
+                padding: "20px",
+                borderRadius: "30px",
+                boxShadow: "1px 1px 20px #02070e !important"}}>
               <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
                 <Tab eventKey="deposit" title="Deposit">
                   <div>
