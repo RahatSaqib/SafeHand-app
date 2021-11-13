@@ -107,16 +107,16 @@ class App extends Component {
       <div className='text-railway'>
         <nav className="navbar navbar-dark fixed-top flex-md-nowrap p-0 shadow">
           <div
-            className="navbar-brand col-sm-3 col-md-2 mr-0 flex" style={{display:"flex"}}
+             style={{display:"flex",justifyContent:"center",width:"100%"}}
           >
         <img src={safehandpic} className="App-logo" style ={{width :"40px !important" ,height:"40px"}} alt="logo" height="32"/>
-          <b>Safe Hand</b>
+          <b  style={{marginTop:"5px"}}>Safe Hand</b>
         </div>
         </nav>
         <div className="container-fluid mt-5 text-center">
         <br></br>
-          <h1>Welcome to Safe Hand</h1>
-          <h2>{this.state.account}</h2>
+          <h4>Welcome to Safe Hand</h4>
+          <small className="accountDetails">Account : {this.state.account.slice(0.,7)}......{this.state.account.slice(-7)}</small>
           <br></br>
           <div className="row">
             <main role="main" className="col-lg-12 d-flex text-center">

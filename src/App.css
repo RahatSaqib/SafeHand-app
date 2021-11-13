@@ -11,6 +11,13 @@ body{
   text-align: left;
   background-color: #0f0a2d !important;
 }
+.accountDetails{
+  padding: 5px;
+  background: white;
+  color: #c71616;
+  font-weight: 800;
+  border-radius: 10px 10px 0px 0px;
+}
 
 .App-logo {
   height: 40vmin;
