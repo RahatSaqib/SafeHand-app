@@ -9,9 +9,13 @@
 
 ## 【Video Overview】
 ***
+## 【Screenshots】
+![SH1](https://user-images.githubusercontent.com/37343956/141669636-e9a3cd4d-b915-4007-9577-db62a1fb1c61.png)
 
+![sh2](https://user-images.githubusercontent.com/37343956/141669638-d5c3458c-406b-4d9a-adf6-2692be20567f.png)
 
-https://user-images.githubusercontent.com/37343956/141668486-ddf33cb8-8844-4ef9-ac69-4a2d18fa02fc.mp4
+![sh3](https://user-images.githubusercontent.com/37343956/141669640-48480904-85ea-47a3-ae52-8c455cb29cdd.png)
+
 
 
 ## 【Setup】
